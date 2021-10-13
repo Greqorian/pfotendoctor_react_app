@@ -54,12 +54,12 @@ export const themeColors = {
 
 //PRIMARY BORDER
 export const themeBorder = {
-    radius: "0.5em",
+    radius: "2em",
     divider: {
         borderBottom: "1px",
-        borderColor: themeColors.characters.lighter,
+        borderColor: themeColors.characters.light,
     },
-    border: `1px solid ${themeColors.characters.lighter}`,
+    border: `1px solid ${themeColors.characters.light}`,
 
 }
 

@@ -10,23 +10,25 @@ const Layout = () => {
     const isMobile: boolean = useBreakpointValue({ base: true, sm: true, md: false, lg: false, xl: false }) ?? true;
 
     return (
-        // <Box id='background' bg={'red'} w="full" h="full">
-            <HStack id="LayoutStack" spacing={0} w="full" h="full">
+        <Box id='background' bg={themeColors.background.normal} w="full" h="full" p={10}>
 
-                <Box flex={"1 2 auto"} bg={'green'}/>
+            <HStack id="layoutStack" spacing={0} w="full" h="full"  >
 
-                <Box w={{ base: "100%", md: "20%" }} minW={{ base: "100%", md: "md" }} h="full" bg={'gray'} border={themeBorder.border} >
-                    <Intro/>
+                <Box flex={"1 2 auto"} bg={themeColors.background.normal} />
+
+                <Box id="intro_frame" display={isMobile ? "none" : "auto"} w={{ base: "100%", md: "20%" }} minW={{ base: "100%", md: "md" }} h="full" bg={'white'} border={themeBorder.border} boxShadow="md" rounded="md">
+                    <Intro />
                 </Box>
 
-                <Box  w={{ base: "100%", md: "20%" }} minW={{ base: "100%", md: "sm" }} h="full" bg={'white'}  borderRight={themeBorder.border}>
-                    <AppointmentForm/>
+                <Box id="appointmentform_frame" w={{ base: "100%", md: "20%" }} minW={{ base: "100%", md: "sm" }} h="full" bg={'white'} borderRight={themeBorder.border} boxShadow="md" rounded="md">
+                    <AppointmentForm />
                 </Box>
 
                 <Box flex={"1 2 auto"} bg={themeColors.background.normal} />
 
             </HStack>
-        // </Box>
+
+        </Box>
     );
 }
 

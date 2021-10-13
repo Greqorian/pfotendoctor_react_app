@@ -15,13 +15,13 @@ const AppointmentForm = () => {
     return (
 
 
-        <VStack align={'flex-start'} p={themeMargins.frame}>
-            <HStack>
-                <Button variant={'ghost'} colorScheme={'orange'}>Zuruck</Button>
+        <VStack id={"appointment_form"} align={'flex-start'} p={themeMargins.frame}>
+            <Stack direction={'row'} justify={'space-between'}>
+                <Button variant={'ghost'} size={'sm'} colorScheme={'orange'}>Zuruck</Button>
                 <Spacer/>
 
-                <Button variant={'outline'} colorScheme={'orange'}>Heute</Button>
-            </HStack>
+                <Button variant={'outline'} size={'sm'} colorScheme={'orange'}>Heute</Button>
+            </Stack>
 
 
             <Text align={'left'} fontSize={'sm'}>Wie möchtest du mit dem Tierarzt sprechen?</Text>
@@ -51,7 +51,7 @@ const AppointmentForm = () => {
             <Input size="xl" minH={'10em'}  onChange={(event)=>{setFormText(event.target.value)}}/>
 
             <Text align={'left'} fontSize={'sm'}>Bilder Videos Dokumente</Text>
-            <Button variant={'outline'} colorScheme={'orange'}>Upload</Button>
+            <Button variant={'outline'} colorScheme={'orange'} size={'sm'}>Upload</Button>
         </VStack >);
 }
 
