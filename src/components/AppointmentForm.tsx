@@ -15,7 +15,7 @@ const AppointmentForm = () => {
     return (
 
 
-        <VStack id={"appointment_form"} align={'flex-start'} p={themeMargins.frame}>
+        <VStack id={"appointment_form"} align={'flex-start'} p={themeMargins.frame} w={'full'}>
             <Stack direction={'row'} justify={'space-between'}>
                 <Button variant={'ghost'} size={'sm'} colorScheme={'orange'}>Zuruck</Button>
                 <Spacer/>

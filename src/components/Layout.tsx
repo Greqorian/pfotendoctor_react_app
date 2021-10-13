@@ -10,7 +10,7 @@ const Layout = () => {
     const isMobile: boolean = useBreakpointValue({ base: true, sm: true, md: false, lg: false, xl: false }) ?? true;
 
     return (
-        <Box id='background' bg={themeColors.background.normal} w="full" h="full" p={10}>
+        <Box id='background' bg={themeColors.background.normal} w="full" h="full" p={isMobile? 0 : 10}>
 
             <HStack id="layoutStack" spacing={0} w="full" h="full"  >
 
